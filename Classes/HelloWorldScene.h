@@ -1,0 +1,47 @@
+#ifndef __HELLOWORLD_SCENE_H__
+#define __HELLOWORLD_SCENE_H__
+
+#include "cocos2d.h"
+#include "PopUp.h"
+
+/**
+	Created by: Diego Ivan Perez Michel
+*/
+
+class HelloWorld : public cocos2d::LayerColor
+{
+public:
+    // there's no 'id' in cpp, so we recommend returning the class instance pointer
+    static cocos2d::Scene* createScene();
+
+    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+    virtual bool init();
+    
+    // a selector callback
+    void menuCloseCallback(cocos2d::Ref* pSender);
+    
+    // implement the "static create()" method manually
+    CREATE_FUNC(HelloWorld);
+
+	cocos2d::Sprite* _cells[3][3];
+	
+	void initCells();
+	void listenForTouch();
+	bool playerDidWin();
+	bool isDraw();
+	void resetGame();
+
+	int _player;
+
+	PopUp* popUp;
+	PopUp* continuePopUp;
+
+	bool isPlayable = true;
+
+
+	void showDialog(std::string title, std::string message);
+	void dialogEvent(Ref* ref, cocos2d::ui::Widget::TouchEventType type);
+
+};
+
+#endif // __HELLOWORLD_SCENE_H__
