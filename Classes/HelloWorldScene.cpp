@@ -127,6 +127,10 @@ void HelloWorld::initCells()
 
 }
 
+HelloWorld::HelloWorld(): isPlayable(true)
+{
+
+}
 
 bool HelloWorld::playerDidWin()
 {

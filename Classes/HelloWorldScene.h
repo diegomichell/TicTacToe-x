@@ -36,11 +36,12 @@ public:
 	PopUp* popUp;
 	PopUp* continuePopUp;
 
-	bool isPlayable = true;
+	bool isPlayable;
 
 
 	void showDialog(std::string title, std::string message);
 	void dialogEvent(Ref* ref, cocos2d::ui::Widget::TouchEventType type);
+	HelloWorld();
 
 };
 
