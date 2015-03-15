@@ -5,6 +5,8 @@ proj.android/gen
 proj.win32/TicTacToe.sdf
 proj.win32/TicTacToe.v12.suo
 proj.win32/Debug.win32
+proj.win32/TicTacToe.opensdf
+proj.win32/TicTacToe.v11.suo
 
 c
 .DS_Store
